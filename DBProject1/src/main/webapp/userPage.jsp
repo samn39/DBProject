@@ -14,7 +14,7 @@
 	
 	<h2>Push your item to potential market</h2>
 		<div class="content">
-		<form action="checkCreateItemn.jsp" method="POST">
+		<form action="checkAddItemn.jsp" method="POST">
 		<label for="article">Article: </label> <select name="article"
 				id="category" required>
 				<option value="" disabled selected hidden="true">Select</option>
