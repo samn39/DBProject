@@ -4,18 +4,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>main</title>
+<title>Welcome to </title>
 </head>
 <body>
 	<h1>Welcome to the .... store</h1>
 	<h2>Choose the type of account to log in...</h2>
 	
-	<form action="logInType.jsp" method="POST">
+	<form action="loginPage.jsp" method="POST">
  
        <input type="submit" value="Log In"/>
     </form>
     <p> Don't have an account? </p>
-    <form action="loginCheck.jsp" method="POST">
+    <form action="signupPage.jsp" method="POST">
     
        <input type="submit" value="Create Account"/>
     </form>
