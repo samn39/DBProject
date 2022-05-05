@@ -16,7 +16,7 @@
 	Connection con = db.getConnection();
     Statement st = con.createStatement();
     ResultSet rs;
-    rs = st.executeQuery("select * from account where username='" + userid + "' and password='" + pwd + "'");
+    rs = st.executeQuery("select * from account where username='" + userid + "' and password='" + pwd + "'and userType='" + loginType + "'");
     if (rs.next()) {
         session.setAttribute("user", userid); // the username will be stored in the session
        /*  out.println("welcome " + userid);

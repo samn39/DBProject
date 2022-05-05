@@ -9,20 +9,21 @@
 <body>
 <h1>Account Sign Up</h1>
 
- <form action="loginCheck.jsp" method="POST">
- 	Account Type:
+ <form action="signupCheck.jsp" method="POST">
+ 	
+	
+       First Name: <input type="text" name="firstName" required/> <br/>
+       Last Name:<input type="text" name="lastName" required/> <br/>
+       Username: <input type="text" name="username" required/> <br/>
+       Password:<input type="password" name="password" required/> <br/>
+       Account Type:
 			<select name="userType" required>
 				<option value="" disabled selected hidden="true">Select Account Type</option>
 				<option value="User">User</option>
 				<option value="Rep">Customer Representation</option>
 				<option value="Admin">Admin</option>
 			</select> 
-	<br/>
-       First Name: <input type="text" name="firstName" required/> <br/>
-       Last Name:<input type="text" name="lastName" required/> <br/>
-       Username: <input type="text" name="username" required/> <br/>
-       Password:<input type="password" name="password" required/> <br/>
-   
+			 <br/>
        <input type="submit" value="Submit"/>
      </form>
      

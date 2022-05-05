@@ -11,7 +11,8 @@
     String firstName = request.getParameter("firstName");   
 	String lastName = request.getParameter("lastName");   
 	String username = request.getParameter("username");   
-	String password = request.getParameter("password");   
+	String password = request.getParameter("password"); 
+	String userType = request.getParameter("userType"); 
     Class.forName("com.mysql.jdbc.Driver");
     ApplicationDB db = new ApplicationDB();	
 	Connection con = db.getConnection();
@@ -19,13 +20,17 @@
     ResultSet rs;
     rs = st.executeQuery("select * from account where username='" + username + "' and password='" + password + "'");
     if (rs.next()) {
-        out.println("Account already exists <a href='loginPage.jsp'></a>");
-        /*  out.println("welcome " + userid);
-        out.println("<a href='logout.jsp'>Log out</a>");
-        response.sendRedirect("success.jsp"); */
-        // account already in database
+        out.println("Account already exists <a href='loginPage.jsp'>Try to log in.</a>");
     } else {
-        session.setAttribute("user", username); // the username will be stored in the session
+        session.setAttribute("user", username); 
+        int rs2 = st.executeUpdate("insert into account values('" + username + "', '" + password + "', '" + firstName + "', '"
+        		+ lastName + "', '" + userType + "')");
+        		session.setAttribute("user", username);
+        		//session.setAttribute("account_type", account_type);
+        		/* response.sendRedirect("account.jsp"); */
+        		/* out.println("welcome " + userid); */
+        		out.println("<h3> Account Created Successfully");
+        		out.println("<form action='loginPage.jsp'><input type='submit' value='Login'/></form>");
 
     }
 %>
