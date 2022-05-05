@@ -18,10 +18,8 @@
 				<option value="Admin">Admin</option>
 			</select> 
 	<br/>
-       First Name: <input type="text" name="username" required/> <br/>
-       Last Name:<input type="password" name="password" required/> <br/>
-       Username: <input type="text" name="username" required/> <br/>
-       Password:<input type="password" name="password" required/> <br/>
+       First Name: <input type="text" name="firstName" required/> <br/>
+       Last Name:<input type="text" name="lastName" required/> <br/>
        Username: <input type="text" name="username" required/> <br/>
        Password:<input type="password" name="password" required/> <br/>
    
