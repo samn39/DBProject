@@ -32,15 +32,10 @@ public class ApplicationDB {
 		try {
 			//Create a connection to your DB
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-			connection = DriverManager.getConnection(connectionUrl,"root", "Nowhereman64");
-=======
+
+
 			connection = DriverManager.getConnection(connectionUrl,"root", "03092001");
->>>>>>> Stashed changes
-=======
-			connection = DriverManager.getConnection(connectionUrl,"root", "03092001");
->>>>>>> Stashed changes
+
 
 			//connection = DriverManager.getConnection(connectionUrl,"root", "03092001");
 
