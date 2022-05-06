@@ -13,7 +13,7 @@
 	String article = request.getParameter("article");   
 	String size = request.getParameter("size");   
 	String brand = request.getParameter("brand");   
-	String username = (String)session.getAttribute("username");
+	String seller = (String)session.getAttribute("username");
 	 
     Class.forName("com.mysql.jdbc.Driver");
     ApplicationDB db = new ApplicationDB();	
@@ -22,7 +22,7 @@
     
    
         //session.getAttribute("username", username); 
-        st.executeUpdate("INSERT INTO items values('" + article + "', '" + size + "', '" + brand + "', '" + username + "')");
+        st.executeUpdate("INSERT INTO items values('" + article + "', '" + size + "', '" + brand + "', '" + seller + "')");
         out.println("<h3> Item Submitted Successfully");
 		out.println("<form action='loginPage.jsp'><input type='submit' value='Login'/></form>");
    
