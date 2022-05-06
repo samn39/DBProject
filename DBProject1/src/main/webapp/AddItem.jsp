@@ -9,7 +9,7 @@
 <body>
 <h2>Push your item to potential market</h2>
 		<div class="content">
-		<form action="checkAddItemn.jsp" method="POST">
+		<form action="checkAddItem.jsp" method="POST">
 		<label for="article">Article: </label> <select name="article"
 				id="category" required>
 				<option value="" disabled selected hidden="true">Select</option>

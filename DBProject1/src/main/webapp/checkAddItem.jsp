@@ -12,8 +12,8 @@
 <%
 	String article = request.getParameter("article");   
 	String size = request.getParameter("size");   
-	String brand = request.getParameter("brand");   
-	String username = session.getAttribute("username").toString();
+	String brand = request.getParameter("brand");  
+	String username = (String) session.getAttribute("username");
 	 
     Class.forName("com.mysql.jdbc.Driver");
     ApplicationDB db = new ApplicationDB();	
@@ -22,7 +22,7 @@
     ResultSet rs;
    
         session.setAttribute("username", username); 
-        int rs2 = st.executeUpdate("INSERT INTO items (article, size, brand)" + "VALUES(?, ?, ?)");
+        int rs2 = st.executeUpdate("INSERT INTO items (clothing_type, size, brand, seller) VALUES (article, size, brand, username )");  
         out.println("<h3> Item Submitted Successfully");
 		out.println("<form action='loginPage.jsp'><input type='submit' value='Login'/></form>");
    

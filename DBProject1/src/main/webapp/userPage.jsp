@@ -31,7 +31,7 @@
 		
 	<h2>Add an Item</h2>
 		<div class="content">
-		<form action="checkCreateItemn.jsp" method="POST">
+		<form action="checkAddItem.jsp" method="POST">
 		<label for="article">Article: </label> <select name="article"
 				id="category" required>
 				<option value="" disabled selected hidden="true">Select</option>
