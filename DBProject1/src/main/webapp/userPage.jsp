@@ -90,16 +90,11 @@
 		<p><input type="submit" value="Submit my item for Auction!"> </p>
 		 </form>
 		 
-	<h2>Ask a Question</h2>
-<form action="manageAccount.jsp" method="POST">
+	<h2>Have any questions? Ask here.</h2>
+<form action="question.jsp" method="POST">
        <input type="submit" value="Ask a question"/>
  </form>
- <form action="logout.jsp" method="POST">
-       <input type="submit" value="Browse all questions"/>
- </form>
-  <form action="logout.jsp" method="POST">
-       <input type="submit" value="Search for questions"/>
- </form>
+
 	
 	
 

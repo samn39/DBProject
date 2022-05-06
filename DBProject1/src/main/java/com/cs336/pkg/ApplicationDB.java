@@ -32,7 +32,6 @@ public class ApplicationDB {
 		try {
 			//Create a connection to your DB
 
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 			connection = DriverManager.getConnection(connectionUrl,"root", "Nowhereman64");
@@ -42,9 +41,6 @@ public class ApplicationDB {
 =======
 			connection = DriverManager.getConnection(connectionUrl,"root", "03092001");
 >>>>>>> Stashed changes
-=======
-			connection = DriverManager.getConnection(connectionUrl,"root", "Nowhereman64");
->>>>>>> parent of 97134b6 (question thing done)
 
 			//connection = DriverManager.getConnection(connectionUrl,"root", "03092001");
 
