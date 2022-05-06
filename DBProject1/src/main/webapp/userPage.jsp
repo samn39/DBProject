@@ -16,14 +16,11 @@
  </form>
 
 <h1>Auctions</h1>
-
-	<h2>Browsing Options</h2>
-
-	<a href="ViewItems.jsp">View All Items</a>
-	<br>
-	<a href="ViewItems.jsp">View Items for Auction</a>
-		
-	<h2>Add an Item</h2>
+	<h2>View Items</h2>
+	
+	<h2>View Items Available on Auction Market</h2>
+	
+	<h2>Push your item to potential market</h2>
 		<div class="content">
 		<form action="checkCreateItemn.jsp" method="POST">
 		<label for="article">Article: </label> <select name="article"
@@ -90,16 +87,11 @@
 		<p><input type="submit" value="Submit my item for Auction!"> </p>
 		 </form>
 		 
-	<h2>Ask a Question</h2>
-<form action="manageAccount.jsp" method="POST">
+	<h2>Have any questions? Ask here.</h2>
+<form action="question.jsp" method="POST">
        <input type="submit" value="Ask a question"/>
  </form>
- <form action="logout.jsp" method="POST">
-       <input type="submit" value="Browse all questions"/>
- </form>
-  <form action="logout.jsp" method="POST">
-       <input type="submit" value="Search for questions"/>
- </form>
+
 	
 	
 
