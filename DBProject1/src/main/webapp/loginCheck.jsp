@@ -8,9 +8,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <%
-    String userid = request.getParameter("username");   
+	String loginType = request.getParameter("userType");
+	String userid = request.getParameter("username");   
     String pwd = request.getParameter("password");
-    String loginType = request.getParameter("userType");
     Class.forName("com.mysql.jdbc.Driver");
     ApplicationDB db = new ApplicationDB();	
 	Connection con = db.getConnection();
