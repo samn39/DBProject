@@ -39,6 +39,9 @@
                 <TD> <%= rs.getString("clothing_type") %></TD>
                 <TD> <%= rs.getString("brand") %></TD>
                 <TD> <%= rs.getString("seller") %></TD>
+                <TD><p><input type="submit" value="Alert Me"> </p></TD>
+                <TD><p><input type="submit" value="Start an auction"> </p></TD>
+                
             </TR>
             <% } %>
         </TABLE>
