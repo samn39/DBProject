@@ -32,7 +32,7 @@ public class ApplicationDB {
 		try {
 			//Create a connection to your DB
 
-			connection = DriverManager.getConnection(connectionUrl,"root", "database");
+			connection = DriverManager.getConnection(connectionUrl,"root", "Nowhereman64");
 
 
 			//connection = DriverManager.getConnection(connectionUrl,"root", "03092001");

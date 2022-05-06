@@ -21,10 +21,10 @@
     Statement st = con.createStatement();
     
    
-        //session.getAttribute("username", username); 
-        st.executeUpdate("INSERT INTO items values('" + 78  + "', '" + article + "', '" + size + "', '" + brand + "', '" + seller + "')");
-        out.println("<h3> Item Submitted Successfully");
-		out.println("<form action='loginPage.jsp'><input type='submit' value='Login'/></form>");
+    //session.getAttribute("username", username); 
+    st.executeUpdate("INSERT INTO items (clothing_type, size, brand, seller) VALUES ('" + article + "', '" + size + "', '" + brand + "', '" + seller + "')");
+    out.println("<h3> Item Submitted Successfully");
+	out.println("<form action='loginPage.jsp'><input type='submit' value='Login'/></form>");
    
 %>
 </body>
