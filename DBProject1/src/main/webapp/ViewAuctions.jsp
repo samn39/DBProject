@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Items for auction</title>
 </head>
 <body>
 <p> each auction row should have create bid option </p>
