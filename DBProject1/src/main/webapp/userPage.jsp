@@ -16,14 +16,11 @@
  </form>
 
 <h1>Auctions</h1>
-
-	<h2>Browsing Options</h2>
-
-	<a href="ViewItems.jsp">View All Items</a>
-	<br>
-	<a href="ViewItems.jsp">View Items for Auction</a>
-		
-	<h2>Add an Item</h2>
+	<h2>View Items</h2>
+	
+	<h2>View Items Available on Auction Market</h2>
+	
+	<h2>Push your item to potential market</h2>
 		<div class="content">
 		<form action="checkCreateItemn.jsp" method="POST">
 		<label for="article">Article: </label> <select name="article"
