@@ -10,7 +10,7 @@
 <h2>Welcome <%=session.getAttribute("user")%><h2/>
 <form action="manageAccount.jsp" method="POST">
        <input type="submit" value="Manage account"/>
- </form>
+</form>
  <form action="logout.jsp" method="POST">
        <input type="submit" value="Log out"/>
  </form>
@@ -31,13 +31,13 @@
 				<option value="Jacket">Jacket</option>
 			</select> <br>	
 		
-		<p><label for="size">Size: </label> <select name="size"
+		<label for="size">Size: </label> <select name="size"
 				id="category" required>
 				<option value="" disabled selected hidden="true">Select</option>
 				<option value="S">Small</option>
 				<option value="M">Medium</option>
 				<option value="L">Large</option>
-			</select> <br>	</p>
+			</select> <br>	
 			
 		<table>
 			 <tr> 
@@ -88,6 +88,15 @@
 		 </form>
 		 
 	<h2>Ask a Question</h2>
+<form action="manageAccount.jsp" method="POST">
+       <input type="submit" value="Ask a question"/>
+ </form>
+ <form action="logout.jsp" method="POST">
+       <input type="submit" value="Browse all questions"/>
+ </form>
+  <form action="logout.jsp" method="POST">
+       <input type="submit" value="Search for questions"/>
+ </form>
 	
 	
 
