@@ -13,16 +13,16 @@
 	String article = request.getParameter("article");   
 	String size = request.getParameter("size");   
 	String brand = request.getParameter("brand");   
-	String username = session.getAttribute("username").toString();
+	String seller = (String)session.getAttribute("username");
 	 
     Class.forName("com.mysql.jdbc.Driver");
     ApplicationDB db = new ApplicationDB();	
 	Connection con = db.getConnection();
     Statement st = con.createStatement();
-    ResultSet rs;
+    
    
-        session.setAttribute("username", username); 
-        int rs2 = st.executeUpdate("INSERT INTO items (article, size, brand)" + "VALUES(?, ?, ?)");
+        //session.getAttribute("username", username); 
+        st.executeUpdate("INSERT INTO items values('" + 78  + "', '" + article + "', '" + size + "', '" + brand + "', '" + seller + "')");
         out.println("<h3> Item Submitted Successfully");
 		out.println("<form action='loginPage.jsp'><input type='submit' value='Login'/></form>");
    
