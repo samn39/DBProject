@@ -22,7 +22,7 @@
     
    
         //session.getAttribute("username", username); 
-        st.executeUpdate("INSERT INTO items values('" + article + "', '" + size + "', '" + brand + "', '" + seller + "')");
+        st.executeUpdate("INSERT INTO items values('" + 78  + "', '" + article + "', '" + size + "', '" + brand + "', '" + seller + "')");
         out.println("<h3> Item Submitted Successfully");
 		out.println("<form action='loginPage.jsp'><input type='submit' value='Login'/></form>");
    
