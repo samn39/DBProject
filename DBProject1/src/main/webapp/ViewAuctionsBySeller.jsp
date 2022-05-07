@@ -13,18 +13,18 @@
 	Connection con = db.getConnection();
  	Statement st = con.createStatement();
  	ResultSet rs;
-	rs = st.executeQuery("select * from auctions");			
+	rs = st.executeQuery("select * from auctions order by seller");			
 
  %>
         
-<title>Items for Auction</title>
+<title>Items by Seller</title>
 </head>
 <body>
-<h1>Items for Auction</h1>
-	<form action="ViewAuctionsByPrice.jsp" method="POST">
+<h1>Items for Auction BY SELLER</h1>
+	<form action="ViewAuctions.jsp" method="POST">
+    <TD><p><input type="submit" value="Back to all items"> </p></TD></form>
+    <form action="ViewAuctionsByPrice.jsp" method="POST">
     <TD><p><input type="submit" value="Sort Items by Price"> </p></TD></form>
-    <form action="ViewAuctionsBySeller.jsp" method="POST">
-    <TD><p><input type="submit" value="Sort Items by Seller"> </p></TD></form>
                
             
         <TABLE BORDER="1">

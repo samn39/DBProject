@@ -13,30 +13,28 @@
 	Connection con = db.getConnection();
  	Statement st = con.createStatement();
  	ResultSet rs;
-	rs = st.executeQuery("select * from items");			
+	rs = st.executeQuery("select * from items join auctions on items.product_id = auctions.product_id;");			
 
  %>
         
-<title>Insert title here</title>
+<title>All Items</title>
 </head>
 <body>
-<p> view items table: include option to create an auction and "alert me" for every item row </p>
-
-<p> each item row should have pid, type, size, brand </p>
-
-
 
         <TABLE BORDER="1">
             <TR>
                 <TH>product_id</TH>
                 <TH>clothing type</TH>
+                <TH>size</TH>
                 <TH>brand</TH>
                 <TH>seller</TH>
+                
             </TR>
             <% while(rs.next()){ %>
             <TR>
                 <TD> <%= rs.getString("product_id") %></td>
                 <TD> <%= rs.getString("clothing_type") %></TD>
+                <TD> <%= rs.getString("size") %></TD>               
                 <TD> <%= rs.getString("brand") %></TD>
                 <TD> <%= rs.getString("seller") %></TD>
                 <TD><p><input type="submit" value="Alert Me"> </p></TD>
