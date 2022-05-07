@@ -46,9 +46,9 @@
                 <TD> <%= rs.getString("bid_increment") %></TD>
                 <TD> <%= rs.getString("curr_bid") %></TD>
                 <TD> <%= rs.getString("highest_bidder") %></TD>
-                <form action="startAuction.jsp" method="POST">
-                <TD><p><input type="submit" value="Bid"> </p></TD>
-               
+                <form action="startBid.jsp" method="POST">
+                <TD><p><input type="submit" value="Bid on me"> </p></TD>
+                
             </TR>
             <% } %>
         </TABLE>
