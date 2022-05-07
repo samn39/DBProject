@@ -24,7 +24,7 @@
     //session.getAttribute("username", username); 
     st.executeUpdate("INSERT INTO items (clothing_type, size, brand, seller) VALUES ('" + article + "', '" + size + "', '" + brand + "', '" + seller + "')");
     out.println("<h3> Item Submitted Successfully");
-	out.println("<form action='loginPage.jsp'><input type='submit' value='Login'/></form>");
+	out.println("<form action='userPage.jsp'><input type='submit' value='Go back to User Page.'/></form>");
    
 %>
 </body>

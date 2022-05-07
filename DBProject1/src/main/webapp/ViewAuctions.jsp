@@ -52,6 +52,6 @@
             </TR>
             <% } %>
         </TABLE>
-
+	out.println("<form action='userPage.jsp'><input type='submit' value='Go Back to User Page.'/></form>");
 </body>
 </html>
