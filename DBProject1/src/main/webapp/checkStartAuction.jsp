@@ -16,7 +16,7 @@
 	String bid_increment = request.getParameter("bid_increment");   
 	String min_price = request.getParameter("min_price");   
 
-	String seller = (String)session.getAttribute("username");
+	String seller = (String)session.getAttribute("user");
 	 
     Class.forName("com.mysql.jdbc.Driver");
     ApplicationDB db = new ApplicationDB();	

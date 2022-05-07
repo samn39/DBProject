@@ -13,7 +13,7 @@
 	String article = request.getParameter("article");   
 	String size = request.getParameter("size");   
 	String brand = request.getParameter("brand");   
-	String seller = (String)session.getAttribute("username");
+	String seller = (String)session.getAttribute("user");
 	 
     Class.forName("com.mysql.jdbc.Driver");
     ApplicationDB db = new ApplicationDB();	
