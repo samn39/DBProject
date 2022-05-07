@@ -18,15 +18,12 @@
 	Connection con = db.getConnection();
     Statement st = con.createStatement();
     ResultSet rs;
-    rs = st.executeQuery("select * from account where username='" + username + "' and password='" + password + "'");
+    rs = st.executeQuery("select * from account where username='" + username + "'");
     
     
     if (rs.next()) {
         out.println("Account already exists <a href='loginPage.jsp'>Try to log in.</a>");
     } else {
-    	if(userType == "Rep"){
-    		out.println("it works");
-    	}
         session.setAttribute("user", username); 
         int rs2 = st.executeUpdate("insert into account values('" + username + "', '" + password + "', '" + firstName + "', '"
         		+ lastName + "', '" + userType + "')");

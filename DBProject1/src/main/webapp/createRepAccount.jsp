@@ -9,15 +9,14 @@
 <body>
 <h1>Account Sign Up for Customer Representative</h1>
 
- <form action="signupCheck.jsp" method="POST">
+ <form action="checkRepSignUp.jsp" method="POST">
  	
 	
        First Name: <input type="text" name="firstName" required/> <br/>
        Last Name:<input type="text" name="lastName" required/> <br/>
        Username: <input type="text" name="username" required/> <br/>
        Password:<input type="password" name="password" required/> <br/>
-       <value: "Rep" name= "userType"/>
-      
+
 			
 			 <br/>
        <input type="submit" value="Submit"/>
