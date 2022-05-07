@@ -23,7 +23,9 @@
 		rs.next();
 		String passwordCheck = rs.getString("password"); 
 		if(password.equals(passwordCheck)){
+			stmt.executeUpdate("SET FOREIGN_KEY_CHECKS=0");
 			stmt.executeUpdate("DELETE FROM account WHERE username LIKE'" + username + "'");
+			stmt.executeUpdate("SET FOREIGN_KEY_CHECKS=1");
 			session.invalidate();
 			out.println("<h3>Thank you for visiting our shop. We hope to see you again soon!"); 	
 			out.println("<form action='mainpage.jsp'><input type='submit' value='Back to mainpage'/></form>"); 

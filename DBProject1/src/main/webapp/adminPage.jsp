@@ -17,5 +17,9 @@
        <input type="submit" value="Create account"/>
  </form>
 
+ <h3>Generate Sale Report</h3>
+ <form action="editAccount.jsp" method="POST">
+       <input type="submit" value="Type of sale report"/>
+ </form>
 </body>
 </html>
