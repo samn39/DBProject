@@ -15,13 +15,19 @@
     ApplicationDB db = new ApplicationDB();	
 	Connection con = db.getConnection();
     Statement st = con.createStatement();
-    ResultSet rs;
-    rs = st.executeQuery("select * from account where username='" + userid + "' and password='" + pwd + "'and userType='" + loginType + "'");
+    ResultSet rs = null;
+    if(loginType.equals("User")){
+    	rs = st.executeQuery("select * from account where username='" + userid + "' and password='" + pwd + "'and userType='" + loginType + "'");
+	}
+    if(loginType.equals("Rep")){
+    	rs = st.executeQuery("select * from customerRep where username='" + userid + "' and password='" + pwd + "'");
+	}
+    if(loginType.equals("Admin")){
+    	rs = st.executeQuery("select * from Admin where username='" + userid + "' and password='" + pwd + "'");
+	}
+    
     if (rs.next()) {
         session.setAttribute("user", userid); // the username will be stored in the session
-       /*  out.println("welcome " + userid);
-        out.println("<a href='logout.jsp'>Log out</a>");
-        response.sendRedirect("success.jsp"); */
         if(loginType.equals("User")){
     		response.sendRedirect("userPage.jsp");
     	}
@@ -32,6 +38,7 @@
     		response.sendRedirect("adminPage.jsp");
     	}
     } else {
-        out.println("Invalid password <a href='loginPage.jsp'>try again</a>");
+        out.println("<h3>Invalid password ");
+        out.println("<form action='loginPage.jsp'><input type='submit' value='Try Again'/></form>");
     }
 %>
