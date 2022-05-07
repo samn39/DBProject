@@ -12,7 +12,6 @@
 	String lastName = request.getParameter("lastName");   
 	String username = request.getParameter("username");   
 	String password = request.getParameter("password");  
-
     Class.forName("com.mysql.jdbc.Driver");
     ApplicationDB db = new ApplicationDB();	
 	Connection con = db.getConnection();
