@@ -50,6 +50,8 @@
                 <TD><p><input type="submit" value="Bid on me"> </p></TD>
                 <form action="ViewBidHistory.jsp" method="POST">
                 <TD><p><input type="submit" value="View Bid History"> </p></TD>
+                <form action="ViewSimilarItems.jsp" method="POST">
+                <TD><p><input type="submit" value="View Similar Items"> </p></TD>
                 
             </TR>
             <% } %>

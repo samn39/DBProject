@@ -21,8 +21,8 @@
     Statement st = con.createStatement();
     
     st.executeUpdate("INSERT INTO alerts (clothing_type, size, brand, seller) VALUES ('" + clothing_type + "', '" + size + "', '" + brand + "', '" + seller + "')");
-    out.println("<h3> Item Submitted Successfully");
-	out.println("<form action='userPage.jsp'><input type='submit' value='Go back to User Page.'/></form>");
+    out.println("<h3> Alert Set Successfully");
+	out.println("<form action='ViewItems.jsp'><input type='submit' value='Go back to Items Page.'/></form>");
     
     
 %>
