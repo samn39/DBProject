@@ -13,7 +13,7 @@
 	Connection con = db.getConnection();
  	Statement st = con.createStatement();
  	ResultSet rs;
-	rs = st.executeQuery("select * from items join auctions on items.product_id = auctions.product_id;");			
+	rs = st.executeQuery("select * from items");			
 
  %>
         
