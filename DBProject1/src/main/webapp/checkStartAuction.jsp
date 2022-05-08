@@ -25,8 +25,8 @@
     ResultSet rs;
     
     //session.setAttribute("user", username); 
-    st.executeUpdate("INSERT INTO auctions (seller, starting_price, closing_date, closing_time, min_price, bid_increment) VALUES ('" + seller + "', '" + starting_price + "', '" + closing_date + "', '"
-        		+ closing_time + "', '" + min_price + "', '" +bid_increment + "')");
+  //  st.executeUpdate("INSERT INTO auctions (seller, starting_price, closing_date, closing_time, min_price, bid_increment) VALUES ('" + seller + "', '" + starting_price + "', '" + closing_date + "', '"
+   //     		+ closing_time + "', '" + min_price + "', '" +bid_increment + "')");
        
         		
     out.println("<h3> Auction Created Successfully");

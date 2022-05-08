@@ -7,23 +7,25 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-
+<form action="ViewItems.jsp" method="POST">
+ <input type="submit" value="Go back to all items"/>
+    </form>
 	<h3>Search Items for Auction based on Keywords</h3>
-	<form action="searchItems.jsp" method="POST">
-		<input type="text" name="search" placeholder="brand, article, or seller">
+	<form>
+		<input type="text" name="search" placeholder="question">
 		<button type="submit">Search</button>
 	</form>
-	<br>
- <% 
- 	Class.forName("com.mysql.jdbc.Driver");
- 	ApplicationDB db = new ApplicationDB();	
-	Connection con = db.getConnection();
- 	Statement st = con.createStatement();
- 	ResultSet rs;
-	rs = st.executeQuery("select * from items join auctions on items.product_id = auctions.product_id;");			
 
- %>
-        
+	<%
+	
+		ApplicationDB db = new ApplicationDB();
+		Connection con = db.getConnection();
+		Statement stmt = con.createStatement();
+		String entity = request.getParameter("search");
+		String str = "select * from items join auctions on items.product_id = auctions.product_id WHERE items.brand LIKE'%" + entity + "%' or items.clothing_type like '%" + entity + "%' or items.seller like '%" + entity + "%'";
+		ResultSet rs = stmt.executeQuery(str);
+		
+		%>
 <title>All Items</title>
 </head>
 <body>
@@ -45,12 +47,10 @@
                 <TD> <%= rs.getString("brand") %></TD>
                 <TD> <%= rs.getString("seller") %></TD>
                 <form action="checkAlertMe.jsp" method="POST">
-                <TD><p><input type="submit" value="Alert Me"> </p></TD>
+                <TD><p><input type="submit" value="Alert Me"> </p></TD> </form>
                 <form action="startAuction.jsp" method="POST">
-                <TD><p><input type="submit" value="Start an auction"> </p></TD>
+                <TD><p><input type="submit" value="Start an auction"> </p></TD> </form>
                 
             </TR>
             <% } %>
         </TABLE>
-</body>
-</html>
