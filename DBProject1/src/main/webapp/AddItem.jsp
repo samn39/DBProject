@@ -10,7 +10,7 @@
 <h2>Push your item to potential market</h2>
 		<div class="content">
 		<form action="checkAddItem.jsp" method="POST">
-		<label for="article">Article: </label> <select name="article"
+		<label for="clothing_type">Article: </label> <select name="clothing_type"
 				id="category" required>
 				<option value="" disabled selected hidden="true">Select</option>
 				<option value="Shirt">Shirt</option>

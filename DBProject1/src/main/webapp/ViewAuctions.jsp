@@ -48,6 +48,8 @@
                 <TD> <%= rs.getString("highest_bidder") %></TD>
                 <form action="startBid.jsp" method="POST">
                 <TD><p><input type="submit" value="Bid on me"> </p></TD>
+                <form action="ViewBidHistory.jsp" method="POST">
+                <TD><p><input type="submit" value="View Bid History"> </p></TD>
                 
             </TR>
             <% } %>
