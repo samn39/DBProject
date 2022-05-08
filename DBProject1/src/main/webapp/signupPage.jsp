@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Account Sign Up</h1>
+<h1>Account Sign Up For Buyer/Seller</h1>
 
  <form action="signupCheck.jsp" method="POST">
  	
