@@ -16,7 +16,7 @@
 	String bid_increment = request.getParameter("bid_increment");   
 	String min_price = request.getParameter("min_price");   
 
-	String seller = (String)session.getAttribute("username");
+	String seller = (String)session.getAttribute("user");
 	 
     Class.forName("com.mysql.jdbc.Driver");
     ApplicationDB db = new ApplicationDB();	
@@ -25,7 +25,7 @@
     ResultSet rs;
     
     //session.setAttribute("user", username); 
-    st.executeUpdate("insert into auctions values('" + seller + "', '" + starting_price + "', '" + closing_date + "', '"
+    st.executeUpdate("INSERT INTO auctions (seller, starting_price, closing_date, closing_time, min_price, bid_increment) VALUES ('" + seller + "', '" + starting_price + "', '" + closing_date + "', '"
         		+ closing_time + "', '" + min_price + "', '" +bid_increment + "')");
        
         		
