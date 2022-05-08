@@ -7,7 +7,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     
-<title>View enduser account</title>
+<title>Edit User Account</title>
 </head>
 <body>
  <% 
@@ -38,8 +38,9 @@
                 <TD> <%= rs.getString("username") %></TD>
                 <TD> <%= rs.getString("password") %></TD>
                 
-             <form action="answerQuestion.jsp?questionID=<%=rs.getString("username")%>" method="POST">
+             <form action="updateUserInfo.jsp?username=<%=rs.getString("username")%>" method="POST">
                 <TD>
+            
                 <input type="submit" value="Edit account">
                 </TD>
                 </form>

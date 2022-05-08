@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Replying Questions</title>
+<title>Customer Representative Page</title>
 </head>
 <body>
 <h1>Welcome <%=session.getAttribute("user")%><h1/>
@@ -20,9 +20,5 @@
        <input type="submit" value="View end-user accounts"/>
  </form>
 
- <h3>Generate Sale Report</h3>
- <form action="editAccount.jsp" method="POST">
-       <input type="submit" value="Type of sale report"/>
- </form>
 </body>
 </html>
