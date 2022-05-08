@@ -16,14 +16,7 @@
        Last Name:<input type="text" name="lastName" required/> <br/>
        Username: <input type="text" name="username" required/> <br/>
        Password:<input type="password" name="password" required/> <br/>
-       Account Type:
-			<select name="userType" required>
-				<option value="" disabled selected hidden="true">Select Account Type</option>
-				<option value="User">User</option>
-				<option value="Rep">Customer Representation</option>
-				<option value="Admin">Admin</option>
-			</select> 
-			 <br/>
+			
        <input type="submit" value="Submit"/>
      </form>
      

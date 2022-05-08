@@ -7,8 +7,8 @@
 <title>Welcome to </title>
 </head>
 <body>
-	<h1>Welcome to the .... store</h1>
-	<h2>Choose the type of account to log in...</h2>
+	<h1>Welcome to the Clothing Auction Store</h1>
+	<h3>Click here to log in</h3>
 	
 	<form action="loginPage.jsp" method="POST">
  

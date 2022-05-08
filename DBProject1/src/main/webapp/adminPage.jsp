@@ -18,7 +18,7 @@
  </form>
 
  <h3>Generate Sale Report</h3>
- <form action="editAccount.jsp" method="POST">
+ <form action="generateReport.jsp" method="POST">
        <input type="submit" value="Type of sale report"/>
  </form>
 </body>

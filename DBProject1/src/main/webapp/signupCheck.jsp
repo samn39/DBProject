@@ -12,7 +12,6 @@
 	String lastName = request.getParameter("lastName");   
 	String username = request.getParameter("username");   
 	String password = request.getParameter("password"); 
-	String userType = request.getParameter("userType"); 
     Class.forName("com.mysql.jdbc.Driver");
     ApplicationDB db = new ApplicationDB();	
 	Connection con = db.getConnection();
@@ -26,7 +25,7 @@
     } else {
         session.setAttribute("user", username); 
         int rs2 = st.executeUpdate("insert into account values('" + username + "', '" + password + "', '" + firstName + "', '"
-        		+ lastName + "', '" + userType + "')");
+        		+ lastName + "', '" + "User" + "')");
         		session.setAttribute("user", username);
         		//session.setAttribute("account_type", account_type);
         		/* response.sendRedirect("account.jsp"); */
