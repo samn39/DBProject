@@ -12,7 +12,7 @@
     </form>
 	<h3>Search Items for Auction based on Keywords</h3>
 	<form>
-		<input type="text" name="search" placeholder="question">
+		<input type="text" name="search" placeholder="brand, article, or seller">
 		<button type="submit">Search</button>
 	</form>
 
