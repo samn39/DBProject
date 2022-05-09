@@ -14,8 +14,8 @@
 	Connection conn = db.getConnection();
 	String user = (String)session.getAttribute("user");
 	ResultSet result = null;
-	PreparedStatement ps2 = conn.prepareStatement("select * from alerts aler where aler.username=?");
-	ps2.setString(1, "select * from alerts aler where aler.username=?");
+	PreparedStatement ps2 = conn.prepareStatement("select * from alerts alert where alert.username=?");
+	ps2.setString(1, "select * from alerts aler where alert.username=?");
 	result = ps2.executeQuery();
 	
 	
