@@ -12,7 +12,7 @@ insert into customerRep values("cusrep","cusrep");
 Create table admin (username varChar(10), password varchar(50), primary key(username), foreign key(username) references account(username));
 insert into admin values("admin","admin");
 
-
+-- questions
 Create table question(questionID int AUTO_INCREMENT, question varchar(500), answer varchar(500), username varchar(50), customerRep_username varchar(50), foreign key (username) references account(username), foreign key (customerRep_username) references customerRep(username), primary key(questionID)); 
 Alter table question
 Alter answer set default "This question has not been answered yet.";
@@ -26,13 +26,12 @@ size varchar(2),
 brand varchar(50),
 seller varchar(50),
 primary key(product_id));
-select * from items;
 
 -- AUCTIONS TABLE
 drop table if exists auctions;
 CREATE TABLE auctions (
 auction_id int NOT NULL AUTO_INCREMENT,
-    product_id VARCHAR(50),
+    product_id int,
     seller VARCHAR(50),
 	closing_date DATE,
     closing_time TIME,
@@ -42,8 +41,6 @@ auction_id int NOT NULL AUTO_INCREMENT,
     highest_bidder varchar(50),
     primary key (auction_id)
 );
--- insert into auctions values ("1", "shirt", "M", "zara", "bob123", '2022-06-06 23:59:59', 10.00, 10.00);
-select * from auctions;
 
 -- BIDS TABLE
 drop table if exists bids;
@@ -54,17 +51,16 @@ CREATE TABLE bids (
     upper_limit FLOAT DEFAULT 0,
     is_autobid BOOLEAN DEFAULT FALSE,
     bid_amount FLOAT DEFAULT 0,
-    primary_key (bid_id)
+    primary key (bid_id)
 );
     
 -- ALERTS TABLE
 drop table if exists alerts;
 CREATE TABLE alerts (
-    alert_id int NOT NULL AUTO_INCREMENT,
+    alert_id INT NOT NULL AUTO_INCREMENT,
     username VARCHAR(50),
     alert_msg VARCHAR(500),
     product_id INT,
     auction_id INT,
-    primary key (alert_id)
+    PRIMARY KEY (alert_id)
 );
-
