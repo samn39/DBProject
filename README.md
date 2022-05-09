@@ -15,3 +15,6 @@ Password: admin
 Username: cusrep
 
 Password: cusrep
+
+## Note:
+* bidders are anonymized on the main auctions page as bidder1, bidder2 etc.
