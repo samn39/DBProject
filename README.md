@@ -2,7 +2,7 @@
 
 Group 90
 
-Names: Caitlin Moy (cam693), Katherine Liu, Sanviseth Chou, Ramitha Ravishankar
+Names: Caitlin Moy (cam693), Katherine Liu (kgl24), Sanviseth Chou(sc2070), Ramitha Ravishankar (rsr146)
 
 ### Admin Login Credentials:
 

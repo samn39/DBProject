@@ -1,8 +1,21 @@
 -- ACCOUNTS TABLE
 drop table if exists account;
 Create table account (username varChar(10), password varchar(50), firstname varchar(50), lastname varchar(50), userType varchar(50), primary key(username));
-insert into account values("bob123", "hi123", "bob", "bob", "User");
-Select * from account;
+insert into account values("bob", "hi123", "bob", "bob", "User");
+insert into account (username, firstname, lastname, userType) values("admin", "adminF", "adminL", "Admin");
+insert into account (username, firstname, lastname, userType) values("cusrep", "cusrepF", "cusrepL", "Rep");
+
+Create table customerRep (username varChar(10), password varchar(50), primary key(username), foreign key(username) references account(username));
+insert into customerRep values("cusrep","cusrep");
+
+-- admin account (admin, password: admin)
+Create table admin (username varChar(10), password varchar(50), primary key(username), foreign key(username) references account(username));
+insert into admin values("admin","admin");
+
+
+Create table question(questionID int AUTO_INCREMENT, question varchar(500), answer varchar(500), username varchar(50), customerRep_username varchar(50), foreign key (username) references account(username), foreign key (customerRep_username) references customerRep(username), primary key(questionID)); 
+Alter table question
+Alter answer set default "This question has not been answered yet.";
 
 -- ITEMS TABLE
 drop table if exists items;
