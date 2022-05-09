@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome to </title>
+<title>Main Page</title>
 </head>
 <body>
 	<h1>Welcome to the Clothing Auction Store</h1>
