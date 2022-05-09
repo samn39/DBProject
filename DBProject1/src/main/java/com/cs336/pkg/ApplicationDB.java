@@ -35,7 +35,7 @@ public class ApplicationDB {
 			//connection = DriverManager.getConnection(connectionUrl,"root", "database");
 
 
-			connection = DriverManager.getConnection(connectionUrl,"root", "Nowhereman64");
+			connection = DriverManager.getConnection(connectionUrl,"root", "database");
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

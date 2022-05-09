@@ -22,6 +22,10 @@
 	<a href="ViewItems.jsp">View All Items</a>
 	<br>
 	<a href="ViewAuctions.jsp">View Items for Auction</a>
+	<br>
+	<a href="MyAlerts.jsp">View My Alerts</a>
+	<br>
+	
 		
 	<h2>Add an Item</h2>
 		<div class="content">

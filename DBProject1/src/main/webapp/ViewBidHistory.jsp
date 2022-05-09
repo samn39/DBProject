@@ -9,7 +9,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
+
+
+	
+
+<% 
 	Class.forName("com.mysql.jdbc.Driver");
 	ApplicationDB db = new ApplicationDB();	
 	Connection con = db.getConnection();
@@ -40,6 +44,5 @@
 	
 	
 
-%>
 </body>
 </html>

@@ -45,9 +45,9 @@
                 <TD> <%= rs.getString("brand") %></TD>
                 <TD> <%= rs.getString("seller") %></TD>
                 <form action="checkAlertMe.jsp" method="POST">
-                <TD><p><input type="submit" value="Alert Me"> </p></TD>
+                <TD><p><input type="submit" value="Alert Me"> </p></TD></form>
                 <form action="startAuction.jsp" method="POST">
-                <TD><p><input type="submit" value="Start an auction"> </p></TD>
+                <TD><p><input type="submit" value="Start an auction"> </p></TD></form>
                 
             </TR>
             <% } %>

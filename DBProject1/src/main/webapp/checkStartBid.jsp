@@ -9,17 +9,26 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	Class.forName("com.mysql.jdbc.Driver");
-    ApplicationDB db = new ApplicationDB();	
+ <% 
+ 	Class.forName("com.mysql.jdbc.Driver");
+ 	ApplicationDB db = new ApplicationDB();	
 	Connection con = db.getConnection();
-    Statement st = con.createStatement();
-    
-    int auction_id = Integer.parseInt(session.getAttribute("auction_id").toString());
-    
-    
-    //you can del this
-    String str = "SELECT max(b.amount) FROM auction a, bid b WHERE b.auction_id=? AND b.auction_id=a.auction_id";
-%>
+ 	Statement st = con.createStatement();
+ 	ResultSet rs;
+ 	PreparedStatement ps = null;
+ 	
+ 	int auction_id = Integer.parseInt((String)session.getAttribute("auction_id"));
+ 	ps = con.prepareStatement("SELECT max(x.amount) FROM auction a, bid x WHERE  x.auction_id=a.auction_id AND x.auction_id=?");
+ 	
+ 	//ps.setFloat(1, curr_bid);
+	//ps.setString(2, user);
+	ps.setInt(3, auction_id);
+	ps.executeUpdate();
+	
+	ps = con.prepareStatement("INSERT INTO bid(auction_id, user, curr_bid)" + " VALUE(?,?,?)");
+		
+
+ %>
+        
 </body>
 </html>
