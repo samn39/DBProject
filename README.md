@@ -1,4 +1,7 @@
-# DBProject: BuyMe
+# DBProject
+
+A clothing auction store on the web that lets users buy and sell clothes involving bidding, inspiration from the eBay auction service.
+Implemented a user interface and a relational database (MySQL) that supports the operation of this store.
 
 Group 90
 
